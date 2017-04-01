@@ -1,8 +1,0 @@
-c:\Users\Admin\documents\visual studio 2015\Projects\CalKul\UnitTests\bin\Debug\UnitTests.dll
-c:\Users\Admin\documents\visual studio 2015\Projects\CalKul\UnitTests\bin\Debug\UnitTests.pdb
-c:\Users\Admin\documents\visual studio 2015\Projects\CalKul\UnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-c:\Users\Admin\documents\visual studio 2015\Projects\CalKul\UnitTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache
-c:\Users\Admin\documents\visual studio 2015\Projects\CalKul\UnitTests\obj\Debug\UnitTests.dll
-c:\Users\Admin\documents\visual studio 2015\Projects\CalKul\UnitTests\obj\Debug\UnitTests.pdb
-c:\Users\Admin\documents\visual studio 2015\Projects\CalKul\UnitTests\bin\Debug\CalKul.exe
-c:\Users\Admin\documents\visual studio 2015\Projects\CalKul\UnitTests\bin\Debug\CalKul.pdb
