@@ -1,0 +1,8 @@
+c:\users\admin\documents\visual studio 2015\Projects\CalKul\CalKul\bin\Debug\CalKul.exe.config
+c:\users\admin\documents\visual studio 2015\Projects\CalKul\CalKul\bin\Debug\CalKul.exe
+c:\users\admin\documents\visual studio 2015\Projects\CalKul\CalKul\bin\Debug\CalKul.pdb
+c:\users\admin\documents\visual studio 2015\Projects\CalKul\CalKul\bin\Debug\Ninject.dll
+c:\users\admin\documents\visual studio 2015\Projects\CalKul\CalKul\bin\Debug\Ninject.xml
+c:\users\admin\documents\visual studio 2015\Projects\CalKul\CalKul\obj\Debug\CalKul.exe
+c:\users\admin\documents\visual studio 2015\Projects\CalKul\CalKul\obj\Debug\CalKul.pdb
+c:\users\admin\documents\visual studio 2015\Projects\CalKul\CalKul\obj\Debug\CalKul.csprojResolveAssemblyReference.cache
