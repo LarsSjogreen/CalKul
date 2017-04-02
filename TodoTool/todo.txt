@@ -1,0 +1,12 @@
+Root
+XRoot
+^
+Different datatypes
+UI
+Variables
+Plotting
+Adhere (as closely as possible) to RPL naming
+Datatype: RPL program
+Arguments on stack
+Operators on stack
+Datatype visualizers
