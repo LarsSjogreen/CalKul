@@ -50,12 +50,14 @@
     <Compile Include="ConsoleUserInterface.cs" />
     <Compile Include="IArgument.cs" />
     <Compile Include="IUserInterface.cs" />
+    <Compile Include="Operators\Ceil.cs" />
     <Compile Include="Operators\Clear.cs" />
     <Compile Include="Operators\Div.cs" />
     <Compile Include="Operators\Drop.cs" />
     <Compile Include="Operators\Dup.cs" />
     <Compile Include="Operators\Dup2.cs" />
     <Compile Include="Operators\E.cs" />
+    <Compile Include="Operators\Floor.cs" />
     <Compile Include="Operators\Help.cs" />
     <Compile Include="Operators\IOperator.cs" />
     <Compile Include="Operators\Minus.cs" />
