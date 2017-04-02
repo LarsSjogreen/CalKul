@@ -16,13 +16,13 @@ namespace UnitTests
         public void TooFewArgs()
         {
             plus = new Plus();
-            plus.Do(new Stack<double>());
+            plus.Do(new Stack<object>());
         }
 
         [TestMethod]
         public void TwoArgsAdds()
         {
-            var stack = new Stack<double>();
+            var stack = new Stack<object>();
             stack.Push(2);
             stack.Push(3);
             plus = new Plus();
