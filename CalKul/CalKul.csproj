@@ -66,11 +66,13 @@
     <Compile Include="Operators\OperatorUtils.cs" />
     <Compile Include="Operators\Pi.cs" />
     <Compile Include="Operators\Plus.cs" />
+    <Compile Include="Operators\Power.cs" />
     <Compile Include="Operators\Root.cs" />
     <Compile Include="Operators\Sin.cs" />
     <Compile Include="Operators\Sqr.cs" />
     <Compile Include="Operators\Swap.cs" />
     <Compile Include="Operators\Tan.cs" />
+    <Compile Include="Operators\Xroot.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
