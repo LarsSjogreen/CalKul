@@ -16,14 +16,14 @@ namespace UnitTests
         public void TooFewArgs()
         {
             swap = new Swap();
-            swap.Do(new Stack<double>());
+            swap.Do(new Stack<object>());
         }
 
         [TestMethod]
         public void SwapSwaps()
         {
             swap = new Swap();
-            var stack = new Stack<double>();
+            var stack = new Stack<object>();
             stack.Push(1);
             stack.Push(2);
             Assert.AreEqual(1, swap.Do(stack));

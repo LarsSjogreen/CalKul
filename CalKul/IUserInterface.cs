@@ -8,7 +8,7 @@ namespace CalKul
 {
     interface IUserInterface
     {
-        void WriteStack(Stack<double> stack);
+        void WriteStack(Stack<object> stack);
         void Clear();
     }
 }

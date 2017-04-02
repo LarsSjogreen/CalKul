@@ -24,11 +24,11 @@ namespace CalKul
             }
         }
 
-        public double Do(Stack<double> args)
+        public object Do(Stack<object> args)
         {
             OperatorUtils.CheckArgs(args, this);
             args.Pop();
-            return double.MinValue;
+            return null;
         }
     }
 }

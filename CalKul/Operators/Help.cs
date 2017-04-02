@@ -19,7 +19,7 @@ namespace CalKul
             get { return "help"; }
         }
 
-        public double Do(Stack<double> args)
+        public object Do(Stack<object> args)
         {
             Console.WriteLine("Available operators:");
             Console.WriteLine("");

@@ -10,7 +10,8 @@ namespace CalKul
     {
         int NumberOfArguments { get; }
         string OperandName { get; }
-        double Do(Stack<double> args);
-//        void Validate(Stack<double> args);
+        object Do(Stack<object> args);
+//        void Validate(Stack<object> args);
+//      SupportedDatatypes...
     }
 }

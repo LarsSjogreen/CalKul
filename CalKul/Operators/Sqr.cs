@@ -24,10 +24,10 @@ namespace CalKul
             }
         }
 
-        public double Do(Stack<double> args)
+        public object Do(Stack<object> args)
         {
             OperatorUtils.CheckArgs(args, this);
-            var value = args.Pop();
+            var value = (double)args.Pop();
             return value * value;
         }
     }

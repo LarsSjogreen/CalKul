@@ -24,11 +24,11 @@ namespace CalKul
             }
         }
 
-        public double Do(Stack<double> args)
+        public object Do(Stack<object> args)
         {
             OperatorUtils.CheckArgs(args, this);
-            double subtractor = args.Pop();
-            return args.Pop() - subtractor;
+            object subtractor = args.Pop();
+            return (double)args.Pop() - (double)subtractor;
         }
     }
 }

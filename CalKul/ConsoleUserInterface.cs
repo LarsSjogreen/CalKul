@@ -13,7 +13,7 @@ namespace CalKul
             Console.Clear();
         }
 
-        public void WriteStack(Stack<double> stack)
+        public void WriteStack(Stack<object> stack)
         {
             int numRows = 8;
             int counter = numRows;

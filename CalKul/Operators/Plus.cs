@@ -24,10 +24,22 @@ namespace CalKul
             }
         }
 
-        public double Do(Stack<double> args)
+        public object Do(Stack<object> args)
         {
             OperatorUtils.CheckArgs(args, this);
-            return args.Pop() + args.Pop();
+            if (OperatorUtils.IsNumeric(args, this.NumberOfArguments))
+            {
+                return (double)args.Pop() + (double)args.Pop();
+            }
+            else if (OperatorUtils.IsString(args, this.NumberOfArguments))
+            {
+                StringBuilder sb = new StringBuilder((string)args.Pop());
+                return sb.Append((string)args.Pop());
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
