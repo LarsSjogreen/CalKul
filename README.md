@@ -1,8 +1,6 @@
 # CalKul
 An RPN calculator written in C#. For the moment only handles doubles and a few operators.
 
-![Screenshot](/CalKul_screenshot.png)
-
 ## Why?
 For now? Just for fun. Also to have a simple calculator with some RPN/RPL capacity in PowerShell or Bash.
 
