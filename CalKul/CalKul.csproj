@@ -55,6 +55,7 @@
     <Compile Include="Operators\Drop.cs" />
     <Compile Include="Operators\Dup.cs" />
     <Compile Include="Operators\Dup2.cs" />
+    <Compile Include="Operators\E.cs" />
     <Compile Include="Operators\Help.cs" />
     <Compile Include="Operators\IOperator.cs" />
     <Compile Include="Operators\Minus.cs" />
