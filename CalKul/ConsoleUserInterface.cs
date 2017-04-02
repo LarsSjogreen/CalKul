@@ -28,11 +28,15 @@ namespace CalKul
             var stackView = stack.Take(showLevels).Reverse();
             for (var i = 0; i < (numRows - showLevels); i++)
             {
-                Console.WriteLine(counter--.ToString() + ": ");
+                Console.WriteLine(counter--.ToString() + ": :");
             }
             foreach (var stackItem in stackView)
             {
-                Console.WriteLine(counter--.ToString() + ": " + stackItem.ToString());
+                string typ = stackItem.GetType().ToString();
+                typ = typ.Remove(0, 7);
+                typ = typ.ToLower();
+                typ = typ.Remove(1);
+                Console.WriteLine(counter--.ToString() + ":" + typ + ": " + stackItem.ToString());
             }
             Console.WriteLine("-----------------------------------");
         }

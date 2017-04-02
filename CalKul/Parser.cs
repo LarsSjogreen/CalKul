@@ -47,9 +47,15 @@ namespace CalKul
         private bool ParseArgumentAndPutOnStack(string input, Stack<object> stack)
         {
             double doubleArg;
+            bool boolArg;
             if (double.TryParse(input, out doubleArg))
             {
                 stack.Push(doubleArg);
+                return true;
+            }
+            else if (bool.TryParse(input, out boolArg))
+            {
+                stack.Push(boolArg);
                 return true;
             }
             else if (input.StartsWith("\"") && input.EndsWith("\""))
