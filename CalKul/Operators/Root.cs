@@ -24,12 +24,12 @@ namespace CalKul
             }
         }
 
-        public double Do(Stack<double> args)
+        public object Do(Stack<object> args)
         {
             OperatorUtils.CheckArgs(args, this);
-            if (args.Peek() < 0)
+            if ((double)args.Peek() < 0)
                 throw new ArgumentException("Argument is less than zero");
-            return Math.Sqrt(args.Pop());
+            return Math.Sqrt((double)args.Pop());
         }
     }
 }

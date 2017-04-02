@@ -26,7 +26,7 @@ namespace UnitTests
             stack.Push(2);
             stack.Push(3);
             plus = new Plus();
-            Assert.AreEqual(5, plus.Do(stack));
+            Assert.AreEqual(5, (double)(plus.Do(stack)));
         }
     }
 }

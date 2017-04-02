@@ -16,16 +16,16 @@ namespace UnitTests
         public void TooFewArgs()
         {
             root = new Root();
-            root.Do(new Stack<double>());
+            root.Do(new Stack<object>());
         }
 
         [TestMethod]
         public void RootArg()
         {
             root = new Root();
-            var stack = new Stack<double>();
+            var stack = new Stack<object>();
             stack.Push(100);
-            Assert.AreEqual(10, root.Do(stack));
+            Assert.AreEqual(10, (double)root.Do(stack));
         }
     }
 }
