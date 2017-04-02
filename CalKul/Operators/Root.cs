@@ -27,6 +27,8 @@ namespace CalKul
         public double Do(Stack<double> args)
         {
             OperatorUtils.CheckArgs(args, this);
+            if (args.Peek() <= 0)
+                throw new ArgumentException("Argument is 0 or less");
             return Math.Sqrt(args.Pop());
         }
     }
