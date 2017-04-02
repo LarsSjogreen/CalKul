@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalKul
 {
-    class Root : IOperator
+    public class Root : IOperator
     {
         public int NumberOfArguments
         {
@@ -27,6 +27,8 @@ namespace CalKul
         public double Do(Stack<double> args)
         {
             OperatorUtils.CheckArgs(args, this);
+            if (args.Peek() < 0)
+                throw new ArgumentException("Argument is less than zero");
             return Math.Sqrt(args.Pop());
         }
     }
