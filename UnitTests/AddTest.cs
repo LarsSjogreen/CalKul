@@ -22,11 +22,12 @@ namespace UnitTests
         [TestMethod]
         public void TwoArgsAdds()
         {
-            var stack = new Stack<object>();
-            stack.Push(2);
-            stack.Push(3);
             plus = new Plus();
-            Assert.AreEqual(5, (double)(plus.Do(stack)));
+            var stack = new Stack<object>();
+            stack.Push(2.0);
+            stack.Push(3.0);
+            plus = new Plus();
+            Assert.AreEqual(5.0, plus.Do(stack));
         }
     }
 }

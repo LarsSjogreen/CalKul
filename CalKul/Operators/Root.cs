@@ -28,8 +28,10 @@ namespace CalKul
         {
             OperatorUtils.CheckArgs(args, this);
             if ((double)args.Peek() < 0)
+            {
                 throw new ArgumentException("Argument is less than zero");
-            return Math.Sqrt((double)args.Pop());
+            }
+            return Math.Sqrt((double)(args.Pop()));
         }
     }
 }

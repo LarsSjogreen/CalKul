@@ -23,9 +23,10 @@ namespace UnitTests
         public void RootArg()
         {
             root = new Root();
+            double arg = 100;
             var stack = new Stack<object>();
-            stack.Push(100);
-            Assert.AreEqual(10, (double)root.Do(stack));
+            stack.Push(arg);
+            Assert.AreEqual(10.0, root.Do(stack));
         }
     }
 }
