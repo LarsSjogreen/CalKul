@@ -22,7 +22,7 @@ namespace CalKul
         {
             OperatorUtils.CheckArgs(args, this);
             args.Clear();
-            return double.MinValue;
+            return null;
         }
     }
 }

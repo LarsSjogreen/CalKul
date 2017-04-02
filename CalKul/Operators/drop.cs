@@ -28,7 +28,7 @@ namespace CalKul
         {
             OperatorUtils.CheckArgs(args, this);
             args.Pop();
-            return double.MinValue;
+            return null;
         }
     }
 }
