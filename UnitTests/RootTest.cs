@@ -20,7 +20,7 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public void SwapSwaps()
+        public void RootArg()
         {
             root = new Root();
             var stack = new Stack<double>();
