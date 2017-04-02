@@ -52,6 +52,7 @@
     <Compile Include="IUserInterface.cs" />
     <Compile Include="Operators\Ceil.cs" />
     <Compile Include="Operators\Clear.cs" />
+    <Compile Include="Operators\Cos.cs" />
     <Compile Include="Operators\Div.cs" />
     <Compile Include="Operators\Drop.cs" />
     <Compile Include="Operators\Dup.cs" />
@@ -63,10 +64,12 @@
     <Compile Include="Operators\Minus.cs" />
     <Compile Include="Operators\Mult.cs" />
     <Compile Include="Operators\OperatorUtils.cs" />
+    <Compile Include="Operators\Pi.cs" />
     <Compile Include="Operators\Plus.cs" />
     <Compile Include="Operators\Sin.cs" />
     <Compile Include="Operators\Sqr.cs" />
     <Compile Include="Operators\Swap.cs" />
+    <Compile Include="Operators\Tan.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
