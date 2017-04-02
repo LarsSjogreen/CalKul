@@ -34,6 +34,7 @@ namespace CalKul
             {
                 Console.WriteLine(counter--.ToString() + ": " + stackItem.ToString());
             }
+            Console.WriteLine("-----------------------------------");
         }
 
     }
