@@ -6,29 +6,23 @@ using System.Threading.Tasks;
 
 namespace CalKul
 {
-    class Minus : IOperator
+    public class Clr : IOperator
     {
         public int NumberOfArguments
         {
-            get
-            {
-                return 2;
-            }
+            get { return 0; }
         }
 
         public string OperandName
         {
-            get
-            {
-                return "-";
-            }
+            get { return "clr"; }
         }
 
         public double Do(Stack<double> args)
         {
             OperatorUtils.CheckArgs(args, this);
-            double subtractor = args.Pop();
-            return args.Pop() - subtractor;
+            args.Clear();
+            return double.MinValue;
         }
     }
 }

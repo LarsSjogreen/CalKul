@@ -26,10 +26,7 @@ namespace CalKul
 
         public double Do(Stack<double> args)
         {
-            if (args.Count < NumberOfArguments)
-            {
-                throw new ArgumentException("Wrong number of arguments");
-            }
+            OperatorUtils.CheckArgs(args, this);
             return args.Pop() + args.Pop();
         }
     }

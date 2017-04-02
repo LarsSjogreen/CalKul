@@ -10,26 +10,17 @@ namespace CalKul
     {
         public int NumberOfArguments
         {
-            get
-            {
-                return 2;
-            }
+            get { return 2; }
         }
 
         public string OperandName
         {
-            get
-            {
-                return "/";
-            }
+            get { return "/"; }
         }
 
         public double Do(Stack<double> args)
         {
-            if (args.Count < NumberOfArguments)
-            {
-                throw new ArgumentException("Wrong number of arguments");
-            }
+            OperatorUtils.CheckArgs(args, this);
             double subtractor = args.Pop();
             return args.Pop() / subtractor;
         }

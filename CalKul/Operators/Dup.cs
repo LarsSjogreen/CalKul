@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CalKul
 {
-    class Minus : IOperator
+    public class Dup : IOperator
     {
         public int NumberOfArguments
         {
             get
             {
-                return 2;
+                return 1;
             }
         }
 
@@ -20,15 +20,16 @@ namespace CalKul
         {
             get
             {
-                return "-";
+                return "dup";
             }
         }
 
         public double Do(Stack<double> args)
         {
             OperatorUtils.CheckArgs(args, this);
-            double subtractor = args.Pop();
-            return args.Pop() - subtractor;
+            var arg = args.Pop();
+            args.Push(arg);
+            return arg;
         }
     }
 }

@@ -14,29 +14,6 @@ namespace CalKul
         {
         }
 
-        public void WriteStack(Stack<double> stack)
-        {
-            int numRows = 8;
-            int counter = numRows;
-
-            Console.Clear();
-            var showLevels = stack.Count;
-            if (showLevels > numRows)
-            {
-                showLevels = numRows;
-            }
-
-            var stackView = stack.Take(showLevels).Reverse();
-            for (var i = 0; i < (numRows - showLevels); i++)
-            {
-                Console.WriteLine(counter--.ToString() + ": ");
-            }
-            foreach (var stackItem in stackView)
-            {
-                Console.WriteLine(counter--.ToString() + ": " + stackItem.ToString());
-            }
-        }
-
         public void ParseDo(string input, Stack<double> stack)
         {
             double number;
