@@ -9,7 +9,7 @@ namespace CalKul
     interface IArgument
     {
         ArgumentType Type { get; }
-        double NumericValue { get; }
+        object NumericValue { get; }
         string StringValue { get; }
     }
 

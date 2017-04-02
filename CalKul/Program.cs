@@ -15,20 +15,20 @@ namespace CalKul
 
         static void Main(string[] args)
         {
-            Stack<double> doubleStack = new Stack<double>();
+            Stack<object> objectStack = new Stack<object>();
             string input = "";
 
             parser = new Parser();
             RegisterDependencies();
             AutoregisterOperators();
 
-            userInterface.WriteStack(doubleStack);
+            userInterface.WriteStack(objectStack);
             while ((input = Console.ReadLine()) != "quit")
             {
                 try
                 {
-                    parser.ParseDo(input, doubleStack);
-                    userInterface.WriteStack(doubleStack);
+                    parser.ParseDo(input, objectStack);
+                    userInterface.WriteStack(objectStack);
                 } catch (Exception exp)
                 {
                     Console.WriteLine("Error: " + exp.Message);

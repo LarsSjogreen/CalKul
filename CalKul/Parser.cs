@@ -14,7 +14,7 @@ namespace CalKul
         {
         }
 
-        public void ParseDo(string input, Stack<double> stack)
+        public void ParseDo(string input, Stack<object> stack)
         {
             double number;
             if (double.TryParse(input, out number))
@@ -35,10 +35,10 @@ namespace CalKul
                     if (input == op.OperandName)
                     {
                         var retVal = op.Do(stack);
-                        if (retVal != double.MinValue)
-                        {
+                        //if (retVal != double.MinValue)
+                        //{
                             stack.Push(retVal);
-                        }
+                        //}
                     }
                 }
             }
