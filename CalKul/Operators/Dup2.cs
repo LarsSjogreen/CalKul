@@ -6,23 +6,27 @@ using System.Threading.Tasks;
 
 namespace CalKul
 {
-    public class Clr : IOperator
+    public class Dup2 : IOperator
     {
         public int NumberOfArguments
         {
-            get { return 0; }
+            get { return 2; }
         }
 
         public string OperandName
         {
-            get { return "clr"; }
+            get { return "dup2"; }
         }
 
         public double Do(Stack<double> args)
         {
             OperatorUtils.CheckArgs(args, this);
-            args.Clear();
-            return double.MinValue;
+            var arg1 = args.Pop();
+            var arg2 = args.Pop();
+            args.Push(arg2);
+            args.Push(arg1);
+            args.Push(arg2);
+            return arg1;
         }
     }
 }
