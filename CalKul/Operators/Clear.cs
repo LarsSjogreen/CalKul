@@ -18,7 +18,7 @@ namespace CalKul
             get { return "clear"; }
         }
 
-        public double Do(Stack<double> args)
+        public object Do(Stack<object> args)
         {
             OperatorUtils.CheckArgs(args, this);
             args.Clear();

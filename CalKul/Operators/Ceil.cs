@@ -18,10 +18,10 @@ namespace CalKul
             get { return "ceil"; }
         }
 
-        public double Do(Stack<double> args)
+        public object Do(Stack<object> args)
         {
             OperatorUtils.CheckArgs(args, this);
-            return Math.Ceiling(args.Pop());
+            return Math.Ceiling((double)args.Pop());
         }
     }
 }

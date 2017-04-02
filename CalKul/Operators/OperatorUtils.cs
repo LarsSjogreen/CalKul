@@ -8,12 +8,14 @@ namespace CalKul
 {
     public static class OperatorUtils
     {
-        public static void CheckArgs(Stack<double> args, IOperator op)
+        public static void CheckArgs(Stack<object> args, IOperator op)
         {
             if (args.Count < op.NumberOfArguments)
             {
                 throw new ArgumentException("Wrong number of arguments");
             }
+
+
         }
     }
 }
