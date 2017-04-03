@@ -1,15 +1,17 @@
 # CalKul
-An RPN calculator written in C#. For the moment only handles doubles and a few operators.
+An RPN calculator written in C#. For the moment only handles doubles, strings, booleans and a few operators.
 
 ## Why?
 For now? Just for fun. Also to have a simple calculator with some RPN/RPL capacity in PowerShell or Bash.
 
 ## Todo
-* Move from supporting only double to supporting objects on stack
-* Add more RPL words
-* Do crazy stuff
-* Test other user interface?
-* Add variables and persistence
+* [x] Move from supporting only double to supporting objects on stack
+* [ ] Add tan, asin, acos, atan, 1/x, !, ln, e^x, 10^x and log
+* [ ] Add more RPL words for stack manipulation
+* [ ] Add more RPL words for conditionals
+* [ ] Do crazy stuff with URLs
+* [ ] Test other user interface?
+* [ ] Add variables and persistence
 
 ## Ideas for the future
 Lots. No promises though.
