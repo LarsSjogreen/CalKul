@@ -31,10 +31,12 @@ namespace CalKul
             {
                 return (double)args.Pop() + (double)args.Pop();
             }
+            // String addition is non commutative. Thats why the fiddling around with the temporary var
             else if (OperatorUtils.IsString(args, this.NumberOfArguments))
             {
+                var secondString = args.Pop();
                 StringBuilder sb = new StringBuilder((string)args.Pop());
-                return sb.Append((string)args.Pop());
+                return sb.Append(secondString).ToString();
             }
             else
             {
