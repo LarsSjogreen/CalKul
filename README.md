@@ -6,12 +6,14 @@ For now? Just for fun. Also to have a simple calculator with some RPN/RPL capaci
 
 ## Todo
 * [x] Move from supporting only double to supporting objects on stack
-* [ ] Add tan, asin, acos, atan, 1/x, !, ln, e^x, 10^x and log
+* [x] Add tan, rand, ==, <, >
+* [ ] Add asin, acos, atan, 1/x, !, ln, e^x, 10^x and log
 * [ ] Add more RPL words for stack manipulation
 * [ ] Add more RPL words for conditionals
 * [ ] Do crazy stuff with URLs
 * [ ] Test other user interface?
-* [ ] Add variables and persistence
+* [x] Add variables
+* [ ] Add variable persistence
 
 ## Ideas for the future
 Lots. No promises though.
