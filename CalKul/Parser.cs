@@ -44,6 +44,14 @@ namespace CalKul
                         }
                     }
                 }
+
+                foreach (var variable in _storage.GetAllKeys())
+                {
+                    if (input == variable)
+                    {
+                        stack.Push(_storage.GetValue(variable));
+                    }
+                }
             }
         }
 
