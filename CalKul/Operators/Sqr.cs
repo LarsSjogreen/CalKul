@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalKul.Operators
 {
-    class Square : IOperator
+    public class Square : IOperator
     {
         public int NumberOfArguments
         {

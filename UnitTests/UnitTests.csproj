@@ -50,9 +50,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="OperatorsTest\CosTest.cs" />
+    <Compile Include="OperatorsTest\MinusTest.cs" />
     <Compile Include="OperatorsTest\RootTest.cs" />
-    <Compile Include="SwapTest.cs" />
+    <Compile Include="OperatorsTest\SinTest.cs" />
+    <Compile Include="OperatorsTest\SqrTest.cs" />
+    <Compile Include="OperatorsTest\SwapTest.cs" />
     <Compile Include="OperatorsTest\AddTest.cs" />
+    <Compile Include="OperatorsTest\TanTest.cs" />
+    <Compile Include="OperatorsTest\XrootTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
