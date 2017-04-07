@@ -58,10 +58,13 @@
     <Compile Include="Operators\Dup.cs" />
     <Compile Include="Operators\Dup2.cs" />
     <Compile Include="Operators\E.cs" />
+    <Compile Include="Operators\Equals.cs" />
     <Compile Include="Operators\Floor.cs" />
     <Compile Include="Operators\Help.cs" />
     <Compile Include="Operators\IOperator.cs" />
+    <Compile Include="Operators\LessThan.cs" />
     <Compile Include="Operators\Minus.cs" />
+    <Compile Include="Operators\MoreThan.cs" />
     <Compile Include="Operators\Mult.cs" />
     <Compile Include="Operators\OperatorUtils.cs" />
     <Compile Include="Operators\Pi.cs" />
