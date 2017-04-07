@@ -70,6 +70,7 @@
     <Compile Include="Operators\Pi.cs" />
     <Compile Include="Operators\Plus.cs" />
     <Compile Include="Operators\Power.cs" />
+    <Compile Include="Operators\Rand.cs" />
     <Compile Include="Operators\Root.cs" />
     <Compile Include="Operators\Sin.cs" />
     <Compile Include="Operators\Sqr.cs" />

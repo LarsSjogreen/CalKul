@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalKul
+namespace CalKul.Operators
 {
     public class Help : IOperator
     {

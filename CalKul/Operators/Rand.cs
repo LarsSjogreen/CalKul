@@ -6,27 +6,22 @@ using System.Threading.Tasks;
 
 namespace CalKul.Operators
 {
-    public class Dup2 : IOperator
+    class Rand : IOperator
     {
+        Random ran = new Random(DateTime.Now.Millisecond);
         public int NumberOfArguments
         {
-            get { return 2; }
+            get { return 0; }
         }
 
         public string OperandName
         {
-            get { return "dup2"; }
+            get { return "rand"; }
         }
 
         public object Do(Stack<object> args)
         {
-            OperatorUtils.CheckArgs(args, this);
-            var arg1 = args.Pop();
-            var arg2 = args.Pop();
-            args.Push(arg2);
-            args.Push(arg1);
-            args.Push(arg2);
-            return arg1;
+            return ran.NextDouble();
         }
     }
 }

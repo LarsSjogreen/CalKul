@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CalKul;
 using System.Collections;
 using System.Collections.Generic;
+using CalKul.Operators;
 
 namespace UnitTests
 {
