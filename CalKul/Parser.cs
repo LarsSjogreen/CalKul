@@ -9,10 +9,13 @@ namespace CalKul
 {
     public class Parser
     {
+        private IVariableStorage _storage;
+
         public List<IOperator> Operators { get; set; }
 
-        public Parser()
+        public Parser(IVariableStorage storage)
         {
+            _storage = storage;
         }
 
         public void ParseDo(string input, Stack<object> stack)

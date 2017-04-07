@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Ninject;
+using CalKul.Operators;
 
 namespace CalKul
 {
@@ -12,14 +13,20 @@ namespace CalKul
     {
         static Parser parser;
         static IUserInterface userInterface;
+        static IVariableStorage currentStorage;
+        static IKernel kernel;
 
         static void Main(string[] args)
         {
+            kernel = new StandardKernel(new CalculatorModule());
             Stack<object> objectStack = new Stack<object>();
             string input = "";
 
-            parser = new Parser();
-            RegisterDependencies();
+            currentStorage = kernel.Get<IVariableStorage>();
+            userInterface = kernel.Get<IUserInterface>();
+
+            parser = new Parser(currentStorage);
+
             AutoregisterOperators();
 
             userInterface.WriteStack(objectStack);
@@ -36,17 +43,6 @@ namespace CalKul
             }
         }
 
-        static void RegisterDependencies()
-        {
-            using (IKernel kernel = new StandardKernel())
-            {
-                kernel.Bind<IUserInterface>().To<ConsoleUserInterface>();
-
-                userInterface = kernel.Get<IUserInterface>();
-            }
-
-        }
-
         static void AutoregisterOperators()
         {
             parser.Operators = new List<IOperator>();
@@ -56,7 +52,11 @@ namespace CalKul
                                 && t.GetConstructor(Type.EmptyTypes) != null
                             select Activator.CreateInstance(t) as IOperator;
 
-            foreach (var op in operators)
+            var opList = operators.ToList<IOperator>();
+            opList.Add(new Sto(currentStorage));
+            opList.Add(new Listvar(currentStorage));
+
+            foreach (var op in opList)
             {
                 parser.Operators.Add(op);
             }

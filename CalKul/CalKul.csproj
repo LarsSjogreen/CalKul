@@ -47,9 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculatorModule.cs" />
     <Compile Include="ConsoleUserInterface.cs" />
     <Compile Include="IArgument.cs" />
+    <Compile Include="InMemoryVariableStorage.cs" />
     <Compile Include="IUserInterface.cs" />
+    <Compile Include="IVariableStorage.cs" />
     <Compile Include="Operators\Ceil.cs" />
     <Compile Include="Operators\Clear.cs" />
     <Compile Include="Operators\Cos.cs" />
@@ -63,6 +66,7 @@
     <Compile Include="Operators\Help.cs" />
     <Compile Include="Operators\IOperator.cs" />
     <Compile Include="Operators\LessThan.cs" />
+    <Compile Include="Operators\Listvar.cs" />
     <Compile Include="Operators\Minus.cs" />
     <Compile Include="Operators\MoreThan.cs" />
     <Compile Include="Operators\Mult.cs" />
@@ -74,6 +78,7 @@
     <Compile Include="Operators\Root.cs" />
     <Compile Include="Operators\Sin.cs" />
     <Compile Include="Operators\Sqr.cs" />
+    <Compile Include="Operators\Sto.cs" />
     <Compile Include="Operators\Swap.cs" />
     <Compile Include="Operators\Tan.cs" />
     <Compile Include="Operators\Xroot.cs" />
