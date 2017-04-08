@@ -56,12 +56,14 @@
     <Compile Include="Operators\Ceil.cs" />
     <Compile Include="Operators\Clear.cs" />
     <Compile Include="Operators\Cos.cs" />
+    <Compile Include="Operators\Depth.cs" />
     <Compile Include="Operators\Div.cs" />
     <Compile Include="Operators\Drop.cs" />
     <Compile Include="Operators\Dup.cs" />
     <Compile Include="Operators\Dup2.cs" />
     <Compile Include="Operators\E.cs" />
     <Compile Include="Operators\Equals.cs" />
+    <Compile Include="Operators\Factorial.cs" />
     <Compile Include="Operators\Floor.cs" />
     <Compile Include="Operators\Help.cs" />
     <Compile Include="Operators\IOperator.cs" />
