@@ -56,6 +56,7 @@
     <Compile Include="Operators\Ceil.cs" />
     <Compile Include="Operators\Clear.cs" />
     <Compile Include="Operators\Cos.cs" />
+    <Compile Include="Operators\Date.cs" />
     <Compile Include="Operators\Depth.cs" />
     <Compile Include="Operators\Div.cs" />
     <Compile Include="Operators\Drop.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Operators\Sto.cs" />
     <Compile Include="Operators\Swap.cs" />
     <Compile Include="Operators\Tan.cs" />
+    <Compile Include="Operators\Time.cs" />
     <Compile Include="Operators\Xroot.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="RPLProgram.cs" />
