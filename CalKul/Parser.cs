@@ -71,7 +71,7 @@ namespace CalKul
                 {
                     ParseDo(clauses[1], stack);
                 }
-                else
+                else if (clauses.Count == 3)
                 {
                     ParseDo(clauses[2], stack);
                 }
@@ -93,11 +93,6 @@ namespace CalKul
                 dummy.Add(input.Substring(input.IndexOf("then") + 5, input.IndexOf("end") - input.IndexOf("then") - 6));
             }
             return dummy;
-        }
-
-        private List<string> SplitIfThenElse(string v, string input)
-        {
-            throw new NotImplementedException();
         }
 
         private void Eval(object variableValue, Stack<object> stack)
