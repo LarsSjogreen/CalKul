@@ -83,6 +83,7 @@
     <Compile Include="Operators\Tan.cs" />
     <Compile Include="Operators\Xroot.cs" />
     <Compile Include="Parser.cs" />
+    <Compile Include="RPLProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

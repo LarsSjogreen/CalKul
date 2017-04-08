@@ -49,9 +49,21 @@ namespace CalKul
                 {
                     if (input == variable)
                     {
-                        stack.Push(_storage.GetValue(variable));
+                        Eval(_storage.GetValue(variable), stack);
                     }
                 }
+            }
+        }
+
+        private void Eval(object variableValue, Stack<object> stack)
+        {
+            if (variableValue.GetType() == typeof(RPLProgram))
+            {
+                ParseDo(variableValue.ToString(), stack);
+            }
+            else
+            {
+                stack.Push(variableValue);
             }
         }
 
@@ -67,6 +79,13 @@ namespace CalKul
             else if (bool.TryParse(input, out boolArg))
             {
                 stack.Push(boolArg);
+                return true;
+            }
+            else if (input.StartsWith("§") && input.EndsWith("§"))
+            {
+                var prgrm = new RPLProgram();
+                prgrm.Value = Regex.Replace(input, "§", "");
+                stack.Push(prgrm);
                 return true;
             }
             else if (input.StartsWith("\"") && input.EndsWith("\""))
