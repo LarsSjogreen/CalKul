@@ -21,13 +21,13 @@ namespace CalKul
         public void ParseDo(string input, Stack<object> stack)
         {
             input = input.Trim();
-            if (IsProgramStructure(input,stack))
+            if (IsProgramStructure(input, stack))
             {
 
             }
             else if (ParseArgumentAndPutOnStack(input, stack))
             {
-                
+
             }
             else if (input.Contains(" "))
             {
@@ -88,7 +88,8 @@ namespace CalKul
             {
                 dummy.Add(input.Substring(input.IndexOf("then") + 5, input.IndexOf("else") - input.IndexOf("then") - 6));
                 dummy.Add(input.Substring(input.IndexOf("else") + 5, input.IndexOf("end") - input.IndexOf("else") - 6));
-            } else
+            }
+            else
             {
                 dummy.Add(input.Substring(input.IndexOf("then") + 5, input.IndexOf("end") - input.IndexOf("then") - 6));
             }
@@ -130,7 +131,7 @@ namespace CalKul
             }
             else if (input.StartsWith("\"") && input.EndsWith("\""))
             {
-                stack.Push(Regex.Replace(input, "\"",""));
+                stack.Push(Regex.Replace(input, "\"", ""));
                 return true;
             }
             else

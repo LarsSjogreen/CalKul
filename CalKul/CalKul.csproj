@@ -53,6 +53,7 @@
     <Compile Include="InMemoryVariableStorage.cs" />
     <Compile Include="IUserInterface.cs" />
     <Compile Include="IVariableStorage.cs" />
+    <Compile Include="Operators\Abs.cs" />
     <Compile Include="Operators\Ceil.cs" />
     <Compile Include="Operators\Clear.cs" />
     <Compile Include="Operators\Cos.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Operators\Factorial.cs" />
     <Compile Include="Operators\Floor.cs" />
     <Compile Include="Operators\Help.cs" />
+    <Compile Include="Operators\Inv.cs" />
     <Compile Include="Operators\IOperator.cs" />
     <Compile Include="Operators\LessThan.cs" />
     <Compile Include="Operators\Listvar.cs" />
