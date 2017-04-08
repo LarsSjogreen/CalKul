@@ -20,7 +20,12 @@ namespace CalKul
 
         public void ParseDo(string input, Stack<object> stack)
         {
-            if (ParseArgumentAndPutOnStack(input, stack))
+            input = input.Trim();
+            if (IsProgramStructure(input,stack))
+            {
+
+            }
+            else if (ParseArgumentAndPutOnStack(input, stack))
             {
                 
             }
@@ -53,6 +58,46 @@ namespace CalKul
                     }
                 }
             }
+        }
+
+        private bool IsProgramStructure(string input, Stack<object> stack)
+        {
+            if (input.StartsWith("if ") && input.EndsWith(" end"))
+            {
+                List<string> clauses = SplitIfThenElse(input);
+                ParseDo(clauses[0], stack);
+                var result = stack.Pop();
+                if ((typeof(bool) == result.GetType()) && (bool)result == true)
+                {
+                    ParseDo(clauses[1], stack);
+                }
+                else
+                {
+                    ParseDo(clauses[2], stack);
+                }
+                return true;
+            }
+            return false;
+        }
+
+        private List<string> SplitIfThenElse(string input)
+        {
+            List<string> dummy = new List<string>();
+            dummy.Add(input.Substring(3, input.IndexOf("then") - 3));
+            if (input.Contains("else"))
+            {
+                dummy.Add(input.Substring(input.IndexOf("then") + 5, input.IndexOf("else") - input.IndexOf("then") - 6));
+                dummy.Add(input.Substring(input.IndexOf("else") + 5, input.IndexOf("end") - input.IndexOf("else") - 6));
+            } else
+            {
+                dummy.Add(input.Substring(input.IndexOf("then") + 5, input.IndexOf("end") - input.IndexOf("then") - 6));
+            }
+            return dummy;
+        }
+
+        private List<string> SplitIfThenElse(string v, string input)
+        {
+            throw new NotImplementedException();
         }
 
         private void Eval(object variableValue, Stack<object> stack)
