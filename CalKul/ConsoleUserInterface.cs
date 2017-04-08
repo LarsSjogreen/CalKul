@@ -6,11 +6,29 @@ using System.Threading.Tasks;
 
 namespace CalKul
 {
-    class ConsoleUserInterface : IUserInterface
+    class ConsoleUserInterface : IUserInterface, IConfigurable
     {
+        IConfigurator _configurator;
+
+        public ConsoleUserInterface(IConfigurator configurator)
+        {
+            _configurator = configurator;
+            _configurator.Subscribe(this.UpdateConfigs, "windowheight");
+            _configurator.Subscribe(this.UpdateConfigs, "windowwidth");
+            UpdateConfigs();
+        }
+
         public void Clear()
         {
             Console.Clear();
+        }
+
+        public void UpdateConfigs()
+        {
+            int wid = _configurator.ReadConfig("windowwidth", 40);
+            Console.WindowWidth = wid;
+            int heig = _configurator.ReadConfig("windowheight", 20);
+            Console.WindowHeight = heig;
         }
 
         public void WriteStack(Stack<object> stack)

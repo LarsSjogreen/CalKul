@@ -7,15 +7,17 @@ using System.Text.RegularExpressions;
 
 namespace CalKul
 {
-    public class Parser
+    public class Parser : IConfigurable
     {
         private IVariableStorage _storage;
+        private IConfigurator _configurator;
 
         public List<IOperator> Operators { get; set; }
 
-        public Parser(IVariableStorage storage)
+        public Parser(IVariableStorage storage, IConfigurator configurator)
         {
             _storage = storage;
+            _configurator = configurator;
         }
 
         public void ParseDo(string input, Stack<object> stack)
@@ -138,6 +140,16 @@ namespace CalKul
             {
                 return false;
             }
+        }
+
+        public Delegate UpdateConfigs(IVariableStorage configStore)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateConfigs()
+        {
+            throw new NotImplementedException();
         }
     }
 }

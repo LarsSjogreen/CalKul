@@ -14,6 +14,7 @@ namespace CalKul
         static Parser parser;
         static IUserInterface userInterface;
         static IVariableStorage currentStorage;
+        static IConfigurator appConfigurator;
         static IKernel kernel;
 
         static void Main(string[] args)
@@ -23,9 +24,10 @@ namespace CalKul
             string input = "";
 
             currentStorage = kernel.Get<IVariableStorage>();
+            appConfigurator = kernel.Get<IConfigurator>();
             userInterface = kernel.Get<IUserInterface>();
 
-            parser = new Parser(currentStorage);
+            parser = new Parser(currentStorage, appConfigurator);
 
             AutoregisterOperators();
 
@@ -55,6 +57,7 @@ namespace CalKul
             var opList = operators.ToList<IOperator>();
             opList.Add(new Sto(currentStorage));
             opList.Add(new Listvar(currentStorage));
+            opList.Add(new Setconfig(appConfigurator));
 
             foreach (var op in opList)
             {

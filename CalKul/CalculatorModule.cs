@@ -14,6 +14,7 @@ namespace CalKul
         {
             Bind<IUserInterface>().To<ConsoleUserInterface>();
             Bind<IVariableStorage>().To<InMemoryVariableStorage>();
+            Bind<IConfigurator>().To<InMemoryConfigurator>();
         }
     }
 }

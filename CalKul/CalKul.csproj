@@ -50,6 +50,9 @@
     <Compile Include="CalculatorModule.cs" />
     <Compile Include="ConsoleUserInterface.cs" />
     <Compile Include="IArgument.cs" />
+    <Compile Include="IConfigurable.cs" />
+    <Compile Include="IConfigurator.cs" />
+    <Compile Include="InMemoryConfigurator.cs" />
     <Compile Include="InMemoryVariableStorage.cs" />
     <Compile Include="IUserInterface.cs" />
     <Compile Include="IVariableStorage.cs" />
@@ -81,6 +84,7 @@
     <Compile Include="Operators\Power.cs" />
     <Compile Include="Operators\Rand.cs" />
     <Compile Include="Operators\Root.cs" />
+    <Compile Include="Operators\Setconfig.cs" />
     <Compile Include="Operators\Sin.cs" />
     <Compile Include="Operators\Sqr.cs" />
     <Compile Include="Operators\Sto.cs" />
