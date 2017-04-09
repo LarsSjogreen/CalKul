@@ -9,7 +9,7 @@ Write simple RPL programs by enclosing the program with `§`. (This works the sa
 
 Store programs in variables by using `"programname" sto`. Like this:
 
-    § 100 < if "Sad" else "Great" end §
+    § if 100 < then "Sad" else "Great" end §
     "trmpf" sto
     20 trmfp        [output -> Sad]
     120 trmpf       [output -> Great]
