@@ -57,6 +57,9 @@
     <Compile Include="IUserInterface.cs" />
     <Compile Include="IVariableStorage.cs" />
     <Compile Include="Operators\Abs.cs" />
+    <Compile Include="Operators\ACos.cs" />
+    <Compile Include="Operators\ASin.cs" />
+    <Compile Include="Operators\ATan.cs" />
     <Compile Include="Operators\Beep.cs" />
     <Compile Include="Operators\Ceil.cs" />
     <Compile Include="Operators\Clear.cs" />
@@ -96,6 +99,7 @@
     <Compile Include="Operators\Sto.cs" />
     <Compile Include="Operators\Swap.cs" />
     <Compile Include="Operators\Tan.cs" />
+    <Compile Include="Operators\Tau.cs" />
     <Compile Include="Operators\Time.cs" />
     <Compile Include="Operators\Wait.cs" />
     <Compile Include="Operators\Xroot.cs" />
