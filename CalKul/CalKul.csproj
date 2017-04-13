@@ -72,11 +72,13 @@
     <Compile Include="Operators\Factorial.cs" />
     <Compile Include="Operators\Floor.cs" />
     <Compile Include="Operators\Fp.cs" />
+    <Compile Include="Operators\GreaterThanOrEqualTo.cs" />
     <Compile Include="Operators\Help.cs" />
     <Compile Include="Operators\Inv.cs" />
     <Compile Include="Operators\IOperator.cs" />
     <Compile Include="Operators\Ip.cs" />
     <Compile Include="Operators\LessThan.cs" />
+    <Compile Include="Operators\LessThanOrEqualTo.cs" />
     <Compile Include="Operators\Listvar.cs" />
     <Compile Include="Operators\Minus.cs" />
     <Compile Include="Operators\MoreThan.cs" />

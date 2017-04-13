@@ -35,7 +35,7 @@ namespace CalKul.Operators
             Console.WriteLine("");
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
-            return double.MinValue;
+            return null;
         }
     }
 }
