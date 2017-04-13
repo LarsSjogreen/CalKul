@@ -81,7 +81,7 @@
     <Compile Include="Operators\LessThanOrEqualTo.cs" />
     <Compile Include="Operators\Listvar.cs" />
     <Compile Include="Operators\Minus.cs" />
-    <Compile Include="Operators\MoreThan.cs" />
+    <Compile Include="Operators\GreaterThan.cs" />
     <Compile Include="Operators\Mult.cs" />
     <Compile Include="Operators\NotEqual.cs" />
     <Compile Include="Operators\OperatorUtils.cs" />
