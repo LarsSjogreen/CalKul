@@ -24,12 +24,12 @@ namespace UnitTests
         public void XrootArgs()
         {
             xroot = new Xroot();
-            double arg1 = 123;
-            double arg2 = 456;
+            double arg1 = 10;
+            double arg2 = 1;
             var stack = new Stack<object>();
             stack.Push(arg1);
             stack.Push(arg2);
-            Assert.AreEqual(Math.Pow(arg1, 1.0 / arg2), xroot.Do(stack));
+            Assert.AreEqual(10.0, xroot.Do(stack));
         }
     }
 }
