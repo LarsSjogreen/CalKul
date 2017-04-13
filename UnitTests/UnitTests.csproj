@@ -51,7 +51,9 @@
   </Choose>
   <ItemGroup>
     <Compile Include="OperatorsTest\CosTest.cs" />
+    <Compile Include="OperatorsTest\DivTest.cs" />
     <Compile Include="OperatorsTest\MinusTest.cs" />
+    <Compile Include="OperatorsTest\MultTest.cs" />
     <Compile Include="OperatorsTest\RootTest.cs" />
     <Compile Include="OperatorsTest\SinTest.cs" />
     <Compile Include="OperatorsTest\SqrTest.cs" />

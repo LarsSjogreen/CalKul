@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalKul.Operators
 {
-    class Mult : IOperator
+    public class Mult : IOperator
     {
         public int NumberOfArguments
         {
