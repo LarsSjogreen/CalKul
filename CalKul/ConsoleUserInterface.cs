@@ -98,12 +98,11 @@ namespace CalKul
                     Console.WriteLine(": " + stackItem.ToString());
                 }
             }
-            string line = "";
             for (int i = 0; i < Console.WindowWidth; i++)
             {
-                line += "-";
+                Console.Write("-");
             }
-            Console.WriteLine(line);
+            Console.Write(Environment.NewLine);
         }
 
     }

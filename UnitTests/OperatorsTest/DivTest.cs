@@ -11,6 +11,7 @@ namespace UnitTests
     public class DivTest
     {
         Div div;
+
         [TestInitialize]
         public void Initialize()
         {
@@ -21,6 +22,7 @@ namespace UnitTests
         [ExpectedException(typeof(ArgumentException))]
         public void TooFewArgs()
         {
+            div = new Div();
             div.Do(new Stack<object>());
         }
 

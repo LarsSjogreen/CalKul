@@ -12,6 +12,12 @@ namespace UnitTests
     {
         Swap swap;
 
+        [TestInitialize]
+        public void Initialize()
+        {
+            swap = new Swap();
+        }
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void TooFewArgs()

@@ -21,6 +21,7 @@ namespace UnitTests
         [ExpectedException(typeof(ArgumentException))]
         public void TooFewArgs()
         {
+            plus = new Plus();
             plus.Do(new Stack<object>());
         }
 
