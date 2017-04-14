@@ -25,6 +25,28 @@ namespace CalKul.Operators
             return IsOfType(args, numberOfArguments, typeof(string));
         }
 
+        internal static bool CheckIsSupportedTypes(Stack<object> args, int numberOfArguments, List<List<Type>> supportedTypes)
+        {
+            bool isSupported = false;
+            foreach (var typeList in supportedTypes)
+            {
+                bool allSupported = true;
+                var stackArr = args.ToArray();
+                for (int i=0;i< numberOfArguments; i++)
+                {
+                    if (stackArr[i].GetType() != typeList[i])
+                    {
+                        allSupported = false;
+                    }
+                }
+                if (allSupported)
+                {
+                    isSupported = true;
+                }
+            }
+            return isSupported;
+        }
+
         internal static bool IsOfType(Stack<object> args, int numberOfArguments, Type type)
         {
             bool allIsTypable = true;
@@ -32,7 +54,7 @@ namespace CalKul.Operators
             for (int i = 0; i < numberOfArguments; i++)
             {
                 if (stackArr[i].GetType() != type)
-                {
+                 {
                     allIsTypable = false;
                 }
             }

@@ -18,11 +18,31 @@ namespace CalKul.Operators
             get { return "=="; }
         }
 
+        public List<List<Type>> SupportedTypes
+        {
+            get
+            {
+                List<List<Type>> supported = new List<List<Type>>();
+                supported.Add(new List<Type>() { typeof(double), typeof(double) });
+                supported.Add(new List<Type>() { typeof(bool), typeof(bool) });
+                supported.Add(new List<Type>() { typeof(string), typeof(string) });
+                return supported;
+            }
+        }
+
         public object Do(Stack<object> args)
         {
             OperatorUtils.CheckArgs(args, this);
-            var second = args.Pop();
-            return ((double)(args.Pop()) == (double)second);
+            if (OperatorUtils.CheckIsSupportedTypes(args,this.NumberOfArguments,this.SupportedTypes))
+            {
+                var second = args.Pop();
+                var first = args.Pop();
+                return (first.Equals(second));
+            }
+            else
+            {
+                throw new ArgumentException("These can not be compared");
+            }
         }
     }
 }
